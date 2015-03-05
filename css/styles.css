@@ -1,0 +1,123 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two:700);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+body {
+  background-color: #2d3339;
+}
+#main {
+  background-color: #2d3339;
+  font-family: 'Lato', sans-serif;
+  color: #657380;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#main .clear {
+  clear: both;
+}
+#main button {
+  background-color: #4cc36e;
+  color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  border-bottom: 3px solid #147c36;
+  padding: 10px 15px;
+  font-size: 1em;
+  font-family: 'Lato', sans-serif;
+}
+#main button:hover {
+  background-color: #3bc163;
+}
+#main .header {
+  margin: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+#main .header h1 {
+  font-family: 'Lobster Two', cursive;
+  color: #4cc36e;
+  display: inline-block;
+  font-size: 4em;
+  margin: 0px;
+  text-align: center;
+}
+@media (max-width: 660px) {
+  #main .header h1 {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+#main .header .nav-btn {
+  display: inline-block;
+  float: right;
+  margin-top: 25px;
+  margin-right: 20px;
+  margin-left: 15px;
+  text-align: center;
+}
+@media (max-width: 660px) {
+  #main .header .nav-btn {
+    float: none;
+    margin: 15px 0px;
+    width: 95%;
+  }
+}
+#main div.formContainer {
+  display: none;
+}
+#main div.formContainer form {
+  background-color: #edeff0;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 15px;
+}
+#main div.formContainer .help {
+  color: #dc3434;
+}
+#main div.formContainer input {
+  font-family: 'Lato', sans-serif;
+  color: #657380;
+  border-radius: 5px;
+  padding: 5px;
+  border: 2px solid #657380;
+  margin: 10px 0px;
+  font-size: 1em;
+  width: 95%;
+  max-width: 350px;
+}
+#main div.formContainer input.error {
+  border-color: #dc3434;
+}
+#main div.userList .user {
+  background-color: #edeff0;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 15px;
+}
+#main div.userList .user .info {
+  float: left;
+}
+@media (max-width: 660px) {
+  #main div.userList .user .info {
+    width: 100%;
+  }
+}
+#main div.userList .user .info div {
+  margin-bottom: 5px;
+}
+#main div.userList button.delete-btn {
+  display: inline-block;
+  float: right;
+  margin-top: 20px;
+  background-color: #ed4545;
+  border-color: #942a2a;
+  padding: 5px 10px;
+}
+#main div.userList button.delete-btn:hover {
+  background-color: #dc3434;
+}
+@media (max-width: 660px) {
+  #main div.userList button.delete-btn {
+    float: none;
+    display: block;
+    margin-top: 10px;
+  }
+}
