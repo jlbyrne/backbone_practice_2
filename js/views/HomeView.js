@@ -21,7 +21,7 @@ define([
       'click button.userForm': 'addForm'
     },
     render: function() {
-      this.$el.html(this.template());
+      $(this.el).html(this.template());
       this.start();
       return this;
     },
