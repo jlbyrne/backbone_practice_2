@@ -21,6 +21,7 @@ define([
       'click button.userForm': 'addForm'
     },
     render: function() {
+      console.log("woo!")
       this.$el.html(this.tpl);
       this.start();
       return this;
@@ -29,9 +30,10 @@ define([
     // layout template renders before the user data is fetched.
     start: function(){
       this.users = new this.Collections.Users();
-      this.usersView = new this.Views.Users({collection: this.users});
-      this.$el.append(this.usersView.render().el);
-      this.users.fetch();
+      // console.log(this.users);
+      // this.usersView = new this.Views.Users({collection: this.users});
+      // this.$el.append(this.usersView.render().el);
+      // this.users.fetch();
     },
     addForm: function() {
       // see comment on line 67 of userForm.js
