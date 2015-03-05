@@ -16,7 +16,7 @@ define([
 			this.listenTo(this.model, 'destroy', this.remove);
 		},
 		render: function(){
-			this.$el.html(this.template({model: this.model}));
+			this.$el.html(_.template(this.template, {model: this.model}));
 			return this;
 		},
 		events: {

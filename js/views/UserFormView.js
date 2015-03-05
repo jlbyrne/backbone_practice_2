@@ -13,7 +13,7 @@ define([
       this.listenTo(this.model, 'invalid', this.showErrors);
     },
     render: function(){
-      this.$el.html(this.template(this.model.attributes));
+      this.$el.html(_.template(this.template, this.model.attributes));
       $(this.el).slideDown('fast');
       return this;
     },
