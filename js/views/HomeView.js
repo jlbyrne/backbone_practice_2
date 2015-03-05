@@ -2,38 +2,30 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'models/User',
   'collections/Users',
-  'views/UserView',
+  'views/UsersView',
   'views/UserFormView',
   'text!templates/layout.html'
-], function($, _, Backbone, Users, UsersView, UserForm, tpl){
+], function($, _, Backbone, User, Users, UsersView, UserForm, tpl){
 
   var HomeView = Backbone.View.extend({
-    Models: {},
-    Views: {
-      Users: UsersView
-    },
-    Collections: {
-      Users: Users
-    },
     template: tpl,
     events: {
       'click button.userForm': 'addForm'
     },
     render: function() {
-      console.log("woo!")
-      this.$el.html(this.tpl);
+      this.$el.html(tpl);
       this.start();
       return this;
     },
     // I want a separate start function so that the basic
     // layout template renders before the user data is fetched.
     start: function(){
-      this.users = new this.Collections.Users();
-      // console.log(this.users);
-      // this.usersView = new this.Views.Users({collection: this.users});
-      // this.$el.append(this.usersView.render().el);
-      // this.users.fetch();
+      this.users = new Users();
+      this.usersView = new UsersView({collection: this.users});
+      this.$el.append(this.usersView.render().el);
+      this.users.fetch();
     },
     addForm: function() {
       // see comment on line 67 of userForm.js

@@ -11,6 +11,5 @@ require.config({
 require([
   'app'
 ], function(App){
-  console.log("Main.js is being loaded!");
   App.initialize();
 });

@@ -22,6 +22,7 @@ define([
 		addAll: function(){
 			if (this.collection.length > 0){
 				this.$el.empty();
+				console.log(this.collection);
 				this.collection.forEach(this.addOne, this);
 			}
 		}
